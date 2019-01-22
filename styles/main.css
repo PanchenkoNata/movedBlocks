@@ -1,84 +1,97 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body .wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 37% 20% 37%;
-      grid-template-columns: 37% 20% 37%;
-  grid-column-gap: 3%;
+  -ms-grid-columns: 40% 20% 40%;
+      grid-template-columns: 40% 20% 40%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 60%;
+  width: 800px;
   height: 500px;
   margin: 100px auto;
   border: 1px solid yellow;
+  position: relative;
 }
 
-body .wrapper .static {
+body .wrapper .left_block, body .wrapper .right_block {
+  height: 100%;
+  background-color: #ffffee;
+}
+
+body .wrapper .static_block {
   height: 100%;
   background-color: #aaaaaa;
 }
 
-body .wrapper .block {
-  height: 60%;
-  background-color: #ffffee;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+body .wrapper .pos_left1 {
+  position: absolute;
+  left: 200px;
 }
 
-body .wrapper .block .movedItem {
+body .wrapper .pos_left2 {
+  position: absolute;
+  left: 80px;
+}
+
+body .wrapper .pos_right1 {
+  position: absolute;
+  left: 500px;
+}
+
+body .wrapper .pos_right2 {
+  position: absolute;
+  left: 620px;
+}
+
+body .wrapper .moved_item {
   height: 100%;
   width: 100px;
-  margin: 10px;
+  position: absolute;
+  top: 30px;
 }
 
-body .wrapper .block .movedItem .item {
+body .wrapper .moved_item .item {
   height: 70%;
   width: 100%;
   margin-bottom: 15%;
 }
 
-body .wrapper .block .movedItem .type1 {
+body .wrapper .moved_item .type1 {
   background-color: #aaffaa;
 }
 
-body .wrapper .block .movedItem .type2 {
+body .wrapper .moved_item .type2 {
   background-color: #13ddf8;
 }
 
-body .wrapper .block .movedItem .arrow {
+body .wrapper .moved_item .arrow {
   height: 15%;
   width: 100%;
   background-color: #cccccc;
 }
 
-body .wrapper .block .movedItem .toRight {
+body .wrapper .moved_item .toRight {
   position: relative;
 }
 
-body .wrapper .block .movedItem .toRight::after {
+body .wrapper .moved_item .toRight::after {
   display: block;
   content: '\2192';
   font-size: 30px;
 }
 
-body .wrapper .block .movedItem .toLeft {
+body .wrapper .moved_item .toLeft {
   position: relative;
 }
 
-body .wrapper .block .movedItem .toLeft::after {
+body .wrapper .moved_item .toLeft::after {
   display: block;
   content: '\2190';
   font-size: 30px;
-}
-
-body .wrapper .leftBlock {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
 }
 /*# sourceMappingURL=main.css.map */
